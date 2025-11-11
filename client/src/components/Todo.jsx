@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useState,useEffect } from 'react'
 import List from './List'
+import { toast } from 'react-toastify';
 
 
 import {getData,createData} from "../api/todo"
@@ -37,8 +38,10 @@ const handleAddData = () => {
     createData({title})
     .then((res)=>{
         console.log(res)
+        toast.success(`Add Todo ${res.date.newTodo.title} Success`)
         handleGetData()
     })
+
     .catch((err)=>{
         console.log(err)
     })
