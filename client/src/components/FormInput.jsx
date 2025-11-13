@@ -8,7 +8,7 @@ const FormInput = () => {
 
 
   const hdlOnChange = (e) => {
-
+///ccadfadfdfsdfdafadf
     setValue({
         ...value,
         [e.target.name]:e.target.value,
